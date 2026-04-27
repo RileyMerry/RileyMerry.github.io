@@ -10,9 +10,17 @@
 <body>
   <nav>
     <div class="logo">Riley Merry</div>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="robot.html">Project</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Projects ▾</button>
+        <div class="dropdown-content">
+          <a href="robot.html">Network-Controlled Ground Robot</a>
+        </div>
+      </div>
+
       <a href="https://github.com/RileyMerry/robot" target="_blank">GitHub Repo</a>
     </div>
   </nav>
@@ -65,6 +73,15 @@
           <li>Shared ground between logic and motor power</li>
           <li>Custom chassis development</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Project Media</h2>
+      <div class="media-grid">
+        <img src="assets/cad-design.png" alt="CAD chassis design" />
+        <img src="assets/robot-hardware.jpg" alt="Robot hardware setup" />
+        <img src="assets/wiring.jpg" alt="Motor driver and Raspberry Pi wiring" />
       </div>
     </section>
 

@@ -10,43 +10,80 @@
 <body>
   <nav>
     <div class="logo">Riley Merry</div>
+
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="robot.html">Projects</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Projects ▾</button>
+        <div class="dropdown-content">
+          <a href="robot.html">Network-Controlled Ground Robot</a>
+        </div>
+      </div>
+
       <a href="https://github.com/RileyMerry" target="_blank">GitHub</a>
     </div>
   </nav>
 
   <header class="hero">
-    <p class="tag">Electrical Engineering • Embedded Systems • Robotics</p>
-    <h1>Building hardware/software systems that connect code to the real world.</h1>
+    <p class="tag">Electrical Engineering • Embedded Systems • Defense Technology</p>
+    <h1>Electrical Engineering student building practical hardware/software systems.</h1>
     <p class="hero-text">
-      I’m an Electrical Engineering student focused on embedded systems, robotics,
-      C++, Linux, and real-world hardware integration.
+      I’m an Electrical Engineering student with experience in software engineering,
+      defense communication systems, embedded development, C++, Linux, and system-level
+      debugging. My goal is to build reliable engineering systems that connect software,
+      electronics, and real-world mission needs.
     </p>
     <a class="button" href="robot.html">View Featured Project</a>
   </header>
 
   <main>
     <section class="card">
-      <h2>About</h2>
+      <h2>About Me</h2>
       <p>
-        My work focuses on practical engineering projects involving software,
-        electronics, networking, and physical system debugging. I enjoy building
-        systems where code controls real hardware.
+        I am an Electrical Engineering student focused on embedded systems, robotics,
+        communications, and hardware/software integration. I’m especially interested
+        in projects where software directly controls or interprets real-world systems.
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Current Experience</h2>
+        <p>
+          As a year-round software engineering intern at NIWC Pacific, I have worked
+          with C/C++, Linux-based tools, data parsing, debugging, and system integration
+          in defense communication environments.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Past Experience</h2>
+        <p>
+          My background includes experience as a Boeing test technician and service
+          as a Navy Cryptologic Technician, giving me exposure to technical operations,
+          troubleshooting, and mission-focused systems.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Engineering Goals</h2>
+      <p>
+        My long-term goal is to grow as an electrical engineer in embedded systems,
+        RF/communications, robotics, and system integration. I want to continue building
+        projects that combine software, electronics, testing, and practical engineering design.
       </p>
     </section>
 
     <section class="card project-preview">
-      <div>
-        <p class="tag">Featured Project</p>
-        <h2>Network-Controlled Ground Robot</h2>
-        <p>
-          A Raspberry Pi-based robot controlled through a browser interface using
-          a C++ backend, GPIO motor control, and a Linux development workflow.
-        </p>
-        <a class="button secondary" href="robot.html">Read Case Study</a>
-      </div>
+      <p class="tag">Featured Project</p>
+      <h2>Network-Controlled Ground Robot</h2>
+      <p>
+        A Raspberry Pi-based robot controlled through a browser interface using a C++
+        backend, GPIO motor control, and a Linux development workflow.
+      </p>
+      <a class="button secondary" href="robot.html">Read Case Study</a>
     </section>
   </main>
 
