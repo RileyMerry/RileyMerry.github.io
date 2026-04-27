@@ -1,34 +1,138 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f4f4;
+* {
+  box-sizing: border-box;
 }
 
-header {
-  background: #111;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #111827;
+}
+
+.hero {
+  padding: 80px 8%;
+  background: linear-gradient(135deg, #111827, #1f2937);
   color: white;
-  padding: 30px;
-  text-align: center;
+}
+
+.hero h1 {
+  max-width: 850px;
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 12px 0;
+}
+
+.hero-text {
+  max-width: 700px;
+  font-size: 1.15rem;
+  color: #d1d5db;
+}
+
+.tag {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #60a5fa;
 }
 
 main {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-section {
+.card {
   background: white;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 28px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
 }
 
-a {
+.card h2 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.button {
   display: inline-block;
-  background: #111;
+  margin-top: 16px;
+  padding: 12px 18px;
+  background: #2563eb;
   color: white;
-  padding: 10px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.button.secondary {
+  background: #111827;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.architecture {
+  background: #111827;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: monospace;
+  overflow-x: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    margin: 0 8px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
 }
