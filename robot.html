@@ -1,28 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Robot Project</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network-Controlled Ground Robot | Riley Merry</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
+  <nav>
+    <div class="logo">Riley Merry</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="robot.html">Project</a>
+      <a href="https://github.com/RileyMerry/robot" target="_blank">GitHub Repo</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="tag">Raspberry Pi • C++ • GPIO • Linux • Web Control</p>
     <h1>Network-Controlled Ground Robot</h1>
+    <p class="hero-text">
+      A remotely operated ground robot designed to demonstrate embedded control,
+      client/server architecture, and hardware/software integration.
+    </p>
   </header>
 
   <main>
-    <section>
-      <h2>Overview</h2>
+    <section class="card">
+      <h2>Project Overview</h2>
       <p>
-        Raspberry Pi robot controlled through a web interface using C++ and GPIO.
+        This project uses a Raspberry Pi as a Linux-based control computer for a
+        small unmanned ground vehicle. A browser-based interface sends movement
+        commands over WiFi to a C++ server running on the Pi, which then controls
+        GPIO pins connected to a motor driver.
       </p>
     </section>
 
-    <section>
-      <h2>Architecture</h2>
-      <pre>
-Browser → WiFi → Raspberry Pi → C++ Server → GPIO → Motor Driver → Motors
-      </pre>
+    <section class="card">
+      <h2>System Architecture</h2>
+      <div class="architecture">
+        Browser → WiFi → Raspberry Pi → C++ Server → GPIO → Motor Driver → Motors
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Software</h2>
+        <ul>
+          <li>C++ backend server for command handling</li>
+          <li>Browser-based control interface</li>
+          <li>GPIO motor control abstraction</li>
+          <li>CMake-based build workflow</li>
+          <li>Linux/systemd service setup</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Hardware</h2>
+        <ul>
+          <li>Raspberry Pi control computer</li>
+          <li>Motor driver interface</li>
+          <li>External motor battery supply</li>
+          <li>Shared ground between logic and motor power</li>
+          <li>Custom chassis development</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Engineering Challenges</h2>
+      <p>
+        Key challenges included debugging power delivery, understanding shared
+        grounding between the Pi and motor driver, configuring Linux-based
+        development tools, and designing software that separates the web interface
+        from the hardware control layer.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Future Improvements</h2>
+      <ul>
+        <li>Live camera streaming in the web interface</li>
+        <li>Wheel encoders for feedback</li>
+        <li>PID speed control</li>
+        <li>Obstacle detection sensors</li>
+        <li>Semi-autonomous driving modes</li>
+      </ul>
     </section>
   </main>
+
+  <footer>
+    <p>© 2026 Riley Merry</p>
+  </footer>
 </body>
 </html>
