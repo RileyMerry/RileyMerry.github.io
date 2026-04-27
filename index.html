@@ -1,31 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Riley Merry | Engineering Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Riley Merry</h1>
-    <p>Electrical Engineering Student | Embedded Systems | Robotics</p>
+  <nav>
+    <div class="logo">Riley Merry</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="robot.html">Projects</a>
+      <a href="https://github.com/RileyMerry" target="_blank">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="tag">Electrical Engineering • Embedded Systems • Robotics</p>
+    <h1>Building hardware/software systems that connect code to the real world.</h1>
+    <p class="hero-text">
+      I’m an Electrical Engineering student focused on embedded systems, robotics,
+      C++, Linux, and real-world hardware integration.
+    </p>
+    <a class="button" href="robot.html">View Featured Project</a>
   </header>
 
   <main>
-    <section>
+    <section class="card">
       <h2>About</h2>
       <p>
-        I build embedded systems using C++, Raspberry Pi, and hardware/software integration.
+        My work focuses on practical engineering projects involving software,
+        electronics, networking, and physical system debugging. I enjoy building
+        systems where code controls real hardware.
       </p>
     </section>
 
-    <section>
-      <h2>Featured Project</h2>
-      <h3>Network-Controlled Ground Robot</h3>
-      <p>
-        A robot controlled through a browser using a C++ backend and GPIO motor control.
-      </p>
-      <a href="robot.html">View Project</a>
+    <section class="card project-preview">
+      <div>
+        <p class="tag">Featured Project</p>
+        <h2>Network-Controlled Ground Robot</h2>
+        <p>
+          A Raspberry Pi-based robot controlled through a browser interface using
+          a C++ backend, GPIO motor control, and a Linux development workflow.
+        </p>
+        <a class="button secondary" href="robot.html">Read Case Study</a>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <p>© 2026 Riley Merry</p>
+  </footer>
 </body>
 </html>
