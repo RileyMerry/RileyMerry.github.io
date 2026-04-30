@@ -27,11 +27,13 @@
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero fade-section">
       <div class="hero-content">
         <span class="eyebrow">UGV Drone Project</span>
 
-        <h1>Unmanned ground vehicle built around embedded control, networking, and system design.</h1>
+        <h1>Unmanned ground vehicle built around embedded systems and real-world integration.</h1>
 
         <p>
           This project combines Raspberry Pi hardware, C++ software, GPIO motor
@@ -40,7 +42,7 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#target-user" class="btn primary">View Case Study</a>
+          <a href="#cad" class="btn primary">View System</a>
           <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn secondary">
             GitHub Repository
           </a>
@@ -48,112 +50,102 @@
       </div>
     </section>
 
-    <section id="target-user" class="section dark-section fade-section">
+    <!-- TARGET USER -->
+    <section class="section dark-section fade-section">
       <div class="section-inner">
         <h2>Target User & Mission Vision</h2>
 
         <p>
-          The envisioned target users for this platform are military, law
-          enforcement, and emergency-response teams that may need a small ground
-          vehicle for inspection, scouting, training, or remote observation in
-          areas where sending a person first may be unnecessary or unsafe.
+          The envisioned users include military, law enforcement, and emergency
+          response teams requiring a compact ground vehicle for remote inspection
+          and situational awareness.
         </p>
 
         <p>
-          The purpose of this project is not only to build a moving robot, but to
-          explore how embedded control, communication, mechanical design, and
-          software architecture come together in a real system.
+          The goal is not just movement, but demonstrating how embedded control,
+          networking, and mechanical design integrate into a functional system.
         </p>
       </div>
     </section>
 
-    <section class="section panel-section fade-section">
+    <!-- CAD SECTION -->
+    <section id="cad" class="section panel-section fade-section">
       <div class="section-inner">
-        <h2>CAD Model & Physical Design</h2>
+        <h2>CAD Model & Mechanical Design</h2>
 
         <p>
-          The first chassis design focuses on getting the system functional before
-          optimizing for weight, material usage, sensor mounting, and user testing.
-          The goal is to create a simple but reliable test platform that can evolve
-          into a more refined final design.
+          The mechanical design was developed to support embedded hardware,
+          motor drivers, and future sensor expansion. The focus was rapid
+          prototyping and modularity.
         </p>
 
+        <div class="image-grid">
+          <img src="image/CAD1.PNG" class="project-image">
+          <img src="image/CAD2.PNG" class="project-image">
+        </div>
+
+        <img src="image/CAD.PNG" class="project-image">
+
         <p>
-          Future design improvements may include improved motor mounting,
-          cleaner cable routing, camera placement, sensor integration, and a
-          lighter chassis optimized through testing.
+          Future improvements will focus on structural optimization, cable
+          management, and sensor integration.
         </p>
       </div>
     </section>
 
+    <!-- NETWORKING -->
     <section class="section dark-section fade-section">
       <div class="section-inner">
-        <h2>Networking Demonstration</h2>
+        <h2>Networking Demonstration (TCP/IP)</h2>
 
         <p>
-          The robot is controlled through a browser-based interface where the
-          Raspberry Pi acts as the server and the browser acts as the client.
-          Communication occurs over TCP using a local network connection.
+          The system operates using a client-server model where the Raspberry Pi
+          acts as a server and the browser acts as the client.
         </p>
 
         <p>
-          The Wireshark capture below shows the client initiating a connection
-          to the Raspberry Pi server on port 8080. This validates that the robot
-          control interface is communicating over a real client-server network
-          connection.
+          The capture below shows a TCP SYN packet initiating a connection to the
+          Raspberry Pi on port 8080.
         </p>
 
-        <img
-          src="image/tcp-handshake.PNG"
-          alt="Wireshark TCP handshake capture between browser client and Raspberry Pi server"
-          class="project-image"
-        />
+        <img src="image/tcp-handshake.PNG" class="project-image">
 
         <p>
-          This capture shows the initial SYN packet used to establish a TCP
-          connection between the client and the Raspberry Pi server. This is
-          evidence of transport-layer communication between the web interface
-          and the robot control system.
+          This validates real transport-layer communication between the control
+          interface and the embedded system.
         </p>
       </div>
     </section>
 
+    <!-- CODE -->
     <section class="section panel-section fade-section">
       <div class="section-inner">
         <h2>Code Architecture</h2>
 
         <p>
-          The software is organized around C++ source files, a CMake build
-          structure, Linux scripts, GPIO control, front-end browser interaction,
-          and backend logic that translates user input into motor control behavior.
+          The project is structured using modular C++ components, Linux services,
+          and a web interface that translates user input into motor control.
         </p>
 
         <div class="project-card">
-          <h3>Software Stack</h3>
-
-          <p>
-            The project uses a modular layout so the embedded control logic,
-            build system, scripts, and interface code can be developed and tested
-            independently.
-          </p>
+          <h3>Technology Stack</h3>
 
           <div class="tags">
             <span>C++</span>
-            <span>CMake</span>
             <span>Linux</span>
             <span>GPIO</span>
-            <span>HTML/CSS/JS</span>
-            <span>systemd</span>
+            <span>CMake</span>
             <span>TCP/IP</span>
-            <span>Raspberry Pi</span>
+            <span>HTML/CSS</span>
           </div>
 
           <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn primary">
-            View GitHub Repository
+            View Repository
           </a>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
@@ -167,17 +159,12 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-        } else {
-          entry.target.classList.remove("visible");
         }
       });
-    }, {
-      threshold: 0.18
-    });
+    }, { threshold: 0.2 });
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
   </script>
+
 </body>
 </html>
