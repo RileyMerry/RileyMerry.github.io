@@ -22,11 +22,11 @@ body {
 
 nav {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 nav a, .dropbtn {
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: 999px;
   background: rgba(255,255,255,0.05);
 }
@@ -69,7 +69,7 @@ nav a, .dropbtn {
 .image-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 15px;
 }
 
 .tags span {
@@ -104,4 +104,27 @@ nav a, .dropbtn {
 .fade-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ARCHITECTURE */
+.architecture-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.arch-box {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px;
+  background: #1e293b;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.arch-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
 }
