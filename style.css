@@ -62,6 +62,7 @@ nav a:hover,
   color: #38bdf8;
 }
 
+/* DROPDOWN */
 .dropdown {
   position: relative;
 }
@@ -190,8 +191,7 @@ nav a:hover,
 }
 
 .panel-section {
-  background:
-    linear-gradient(180deg, #0f172a 0%, #070b12 100%);
+  background: linear-gradient(180deg, #0f172a 0%, #070b12 100%);
 }
 
 /* PROJECT CARD */
@@ -227,7 +227,23 @@ nav a:hover,
   font-weight: 700;
 }
 
-/* FADE */
+/* IMAGE (Wireshark section) */
+.project-image {
+  width: 100%;
+  max-width: 950px;
+  margin: 32px 0;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+  display: block;
+}
+
+.project-image:hover {
+  transform: scale(1.01);
+  transition: 0.25s ease;
+}
+
+/* FADE ANIMATION */
 .fade-section {
   opacity: 0;
   transform: translateY(38px);
