@@ -31,12 +31,12 @@
       <div class="hero-content">
         <span class="eyebrow">UGV Drone Project</span>
 
-        <h1>Unmanned Ground Vehicle built around embedded control and real-world system design.</h1>
+        <h1>Unmanned ground vehicle built around embedded control, networking, and system design.</h1>
 
         <p>
-          This project explores how a Raspberry Pi, C++ software, GPIO motor control,
-          Linux system services, browser-based control, CAD design, and networking
-          concepts can come together into a working unmanned ground vehicle platform.
+          This project combines Raspberry Pi hardware, C++ software, GPIO motor
+          control, Linux services, browser-based operation, CAD design, and TCP/IP
+          networking into a functional unmanned ground vehicle platform.
         </p>
 
         <div class="hero-buttons">
@@ -51,11 +51,18 @@
     <section id="target-user" class="section dark-section fade-section">
       <div class="section-inner">
         <h2>Target User & Mission Vision</h2>
+
         <p>
-          The envisioned target users for this platform are military, law enforcement,
-          and emergency-response teams that may need a small ground vehicle for inspection,
-          scouting, training, or remote observation in areas where sending a person first
-          may be unnecessary or unsafe.
+          The envisioned target users for this platform are military, law
+          enforcement, and emergency-response teams that may need a small ground
+          vehicle for inspection, scouting, training, or remote observation in
+          areas where sending a person first may be unnecessary or unsafe.
+        </p>
+
+        <p>
+          The purpose of this project is not only to build a moving robot, but to
+          explore how embedded control, communication, mechanical design, and
+          software architecture come together in a real system.
         </p>
       </div>
     </section>
@@ -63,11 +70,18 @@
     <section class="section panel-section fade-section">
       <div class="section-inner">
         <h2>CAD Model & Physical Design</h2>
+
         <p>
           The first chassis design focuses on getting the system functional before
           optimizing for weight, material usage, sensor mounting, and user testing.
           The goal is to create a simple but reliable test platform that can evolve
           into a more refined final design.
+        </p>
+
+        <p>
+          Future design improvements may include improved motor mounting,
+          cleaner cable routing, camera placement, sensor integration, and a
+          lighter chassis optimized through testing.
         </p>
       </div>
     </section>
@@ -75,11 +89,31 @@
     <section class="section dark-section fade-section">
       <div class="section-inner">
         <h2>Networking Demonstration</h2>
+
         <p>
-          The robot uses a browser-based control interface where the Raspberry Pi acts
-          as the server and the browser acts as the client. Wireshark captures can be
-          used to show the TCP handshake and prove the client-server connection between
-          the control page and the robot.
+          The robot is controlled through a browser-based interface where the
+          Raspberry Pi acts as the server and the browser acts as the client.
+          Communication occurs over TCP using a local network connection.
+        </p>
+
+        <p>
+          The Wireshark capture below shows the client initiating a connection
+          to the Raspberry Pi server on port 8080. This validates that the robot
+          control interface is communicating over a real client-server network
+          connection.
+        </p>
+
+        <img
+          src="images/tcp-handshake.png"
+          alt="Wireshark TCP handshake capture between browser client and Raspberry Pi server"
+          class="project-image"
+        />
+
+        <p>
+          This capture shows the initial SYN packet used to establish a TCP
+          connection between the client and the Raspberry Pi server. This is
+          evidence of transport-layer communication between the web interface
+          and the robot control system.
         </p>
       </div>
     </section>
@@ -87,24 +121,37 @@
     <section class="section panel-section fade-section">
       <div class="section-inner">
         <h2>Code Architecture</h2>
+
         <p>
-          The software is organized around C++ source files, CMake build structure,
-          Linux scripts, GPIO control, front-end browser interaction, and backend
-          logic that translates user input into motor control behavior.
+          The software is organized around C++ source files, a CMake build
+          structure, Linux scripts, GPIO control, front-end browser interaction,
+          and backend logic that translates user input into motor control behavior.
         </p>
 
-        <div class="tags">
-          <span>C++</span>
-          <span>CMake</span>
-          <span>Linux</span>
-          <span>GPIO</span>
-          <span>HTML/CSS/JS</span>
-          <span>systemd</span>
-        </div>
+        <div class="project-card">
+          <h3>Software Stack</h3>
 
-        <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn primary">
-          View GitHub Repository
-        </a>
+          <p>
+            The project uses a modular layout so the embedded control logic,
+            build system, scripts, and interface code can be developed and tested
+            independently.
+          </p>
+
+          <div class="tags">
+            <span>C++</span>
+            <span>CMake</span>
+            <span>Linux</span>
+            <span>GPIO</span>
+            <span>HTML/CSS/JS</span>
+            <span>systemd</span>
+            <span>TCP/IP</span>
+            <span>Raspberry Pi</span>
+          </div>
+
+          <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn primary">
+            View GitHub Repository
+          </a>
+        </div>
       </div>
     </section>
   </main>
