@@ -1,114 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Network-Controlled Ground Robot | Riley Merry</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<body>
-  <nav>
-    <div class="logo">Riley Merry</div>
+html {
+  scroll-behavior: smooth;
+}
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
 
-      <div class="dropdown">
-        <button class="dropbtn">Projects ▾</button>
-        <div class="dropdown-content">
-          <a href="robot.html">Network-Controlled Ground Robot</a>
-        </div>
-      </div>
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: blur(14px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-      <a href="https://github.com/RileyMerry/robot" target="_blank">GitHub Repo</a>
-    </div>
-  </nav>
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
 
-  <header class="hero">
-    <p class="tag">Raspberry Pi • C++ • GPIO • Linux • Web Control</p>
-    <h1>Network-Controlled Ground Robot</h1>
-    <p class="hero-text">
-      A remotely operated ground robot designed to demonstrate embedded control,
-      client/server architecture, and hardware/software integration.
-    </p>
-  </header>
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
 
-  <main>
-    <section class="card">
-      <h2>Project Overview</h2>
-      <p>
-        This project uses a Raspberry Pi as a Linux-based control computer for a
-        small unmanned ground vehicle. A browser-based interface sends movement
-        commands over WiFi to a C++ server running on the Pi, which then controls
-        GPIO pins connected to a motor driver.
-      </p>
-    </section>
+nav a,
+.dropbtn {
+  color: #e6edf3;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
 
-    <section class="card">
-      <h2>System Architecture</h2>
-      <div class="architecture">
-        Browser → WiFi → Raspberry Pi → C++ Server → GPIO → Motor Driver → Motors
-      </div>
-    </section>
+nav a:hover,
+.dropbtn:hover {
+  color: #58a6ff;
+}
 
-    <section class="grid">
-      <div class="card">
-        <h2>Software</h2>
-        <ul>
-          <li>C++ backend server for command handling</li>
-          <li>Browser-based control interface</li>
-          <li>GPIO motor control abstraction</li>
-          <li>CMake-based build workflow</li>
-          <li>Linux/systemd service setup</li>
-        </ul>
-      </div>
+.dropdown {
+  position: relative;
+}
 
-      <div class="card">
-        <h2>Hardware</h2>
-        <ul>
-          <li>Raspberry Pi control computer</li>
-          <li>Motor driver interface</li>
-          <li>External motor battery supply</li>
-          <li>Shared ground between logic and motor power</li>
-          <li>Custom chassis development</li>
-        </ul>
-      </div>
-    </section>
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 30px;
+  background: #161b22;
+  min-width: 160px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
 
-    <section class="card">
-      <h2>Project Media</h2>
-      <div class="media-grid">
-        <img src="assets/cad-design.png" alt="CAD chassis design" />
-        <img src="assets/robot-hardware.jpg" alt="Robot hardware setup" />
-        <img src="assets/wiring.jpg" alt="Motor driver and Raspberry Pi wiring" />
-      </div>
-    </section>
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+}
 
-    <section class="card">
-      <h2>Engineering Challenges</h2>
-      <p>
-        Key challenges included debugging power delivery, understanding shared
-        grounding between the Pi and motor driver, configuring Linux-based
-        development tools, and designing software that separates the web interface
-        from the hardware control layer.
-      </p>
-    </section>
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-    <section class="card">
-      <h2>Future Improvements</h2>
-      <ul>
-        <li>Live camera streaming in the web interface</li>
-        <li>Wheel encoders for feedback</li>
-        <li>PID speed control</li>
-        <li>Obstacle detection sensors</li>
-        <li>Semi-autonomous driving modes</li>
-      </ul>
-    </section>
-  </main>
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  background:
+    radial-gradient(circle at top left, rgba(88, 166, 255, 0.25), transparent 35%),
+    linear-gradient(180deg, #0d1117, #111827);
+}
 
-  <footer>
-    <p>© 2026 Riley Merry</p>
-  </footer>
-</body>
-</html>
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  max-width: 760px;
+  font-size: 1.2rem;
+  color: #c9d1d9;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.section {
+  padding: 120px 8%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+}
+
+.section p {
+  color: #c9d1d9;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  background: rgba(22, 27, 34, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.tags span {
+  padding: 8px 12px;
+  background: rgba(88, 166, 255, 0.12);
+  border: 1px solid rgba(88, 166, 255, 0.35);
+  border-radius: 999px;
+  color: #9ecbff;
+  font-size: 0.9rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.primary {
+  background: #58a6ff;
+  color: #0d1117;
+}
+
+.secondary {
+  border: 1px solid #58a6ff;
+  color: #58a6ff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+.fade-section {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #8b949e;
+  background: #0d1117;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  .section {
+    padding: 80px 8%;
+  }
+}
