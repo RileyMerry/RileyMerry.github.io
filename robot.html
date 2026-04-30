@@ -1,220 +1,136 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UGV Drone | Riley Merry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-html {
-  scroll-behavior: smooth;
-}
+<body>
+  <header class="navbar">
+    <div class="logo">Riley Merry</div>
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0d1117;
-  color: #e6edf3;
-  line-height: 1.6;
-}
+    <nav>
+      <a href="index.html">Home</a>
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(13, 17, 23, 0.85);
-  backdrop-filter: blur(14px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 8%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
+      <div class="dropdown">
+        <button class="dropbtn">Projects</button>
+        <div class="dropdown-content">
+          <a href="robot.html">UGV Drone</a>
+        </div>
+      </div>
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
+      <a href="index.html#about">About Me</a>
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
+  <main>
+    <section class="hero fade-section">
+      <div class="hero-content">
+        <span class="eyebrow">UGV Drone Project</span>
 
-nav a,
-.dropbtn {
-  color: #e6edf3;
-  text-decoration: none;
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-}
+        <h1>Unmanned Ground Vehicle built around embedded control and real-world system design.</h1>
 
-nav a:hover,
-.dropbtn:hover {
-  color: #58a6ff;
-}
+        <p>
+          This project explores how a Raspberry Pi, C++ software, GPIO motor control,
+          Linux system services, browser-based control, CAD design, and networking
+          concepts can come together into a working unmanned ground vehicle platform.
+        </p>
 
-.dropdown {
-  position: relative;
-}
+        <div class="hero-buttons">
+          <a href="#target-user" class="btn primary">View Case Study</a>
+          <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn secondary">
+            GitHub Repository
+          </a>
+        </div>
+      </div>
+    </section>
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 30px;
-  background: #161b22;
-  min-width: 160px;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-}
+    <section id="target-user" class="section dark-section fade-section">
+      <div class="section-inner">
+        <h2>Target User & Mission Vision</h2>
+        <p>
+          The envisioned target users for this platform are military, law enforcement,
+          and emergency-response teams that may need a small ground vehicle for inspection,
+          scouting, training, or remote observation in areas where sending a person first
+          may be unnecessary or unsafe.
+        </p>
+      </div>
+    </section>
 
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-}
+    <section class="section panel-section fade-section">
+      <div class="section-inner">
+        <h2>CAD Model & Physical Design</h2>
+        <p>
+          The first chassis design focuses on getting the system functional before
+          optimizing for weight, material usage, sensor mounting, and user testing.
+          The goal is to create a simple but reliable test platform that can evolve
+          into a more refined final design.
+        </p>
+      </div>
+    </section>
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    <section class="section dark-section fade-section">
+      <div class="section-inner">
+        <h2>Networking Demonstration</h2>
+        <p>
+          The robot uses a browser-based control interface where the Raspberry Pi acts
+          as the server and the browser acts as the client. Wireshark captures can be
+          used to show the TCP handshake and prove the client-server connection between
+          the control page and the robot.
+        </p>
+      </div>
+    </section>
 
-.hero {
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  padding: 0 8%;
-  background:
-    radial-gradient(circle at top left, rgba(88, 166, 255, 0.25), transparent 35%),
-    linear-gradient(180deg, #0d1117, #111827);
-}
+    <section class="section panel-section fade-section">
+      <div class="section-inner">
+        <h2>Code Architecture</h2>
+        <p>
+          The software is organized around C++ source files, CMake build structure,
+          Linux scripts, GPIO control, front-end browser interaction, and backend
+          logic that translates user input into motor control behavior.
+        </p>
 
-.hero-content {
-  max-width: 900px;
-}
+        <div class="tags">
+          <span>C++</span>
+          <span>CMake</span>
+          <span>Linux</span>
+          <span>GPIO</span>
+          <span>HTML/CSS/JS</span>
+          <span>systemd</span>
+        </div>
 
-.hero h1 {
-  font-size: clamp(2.4rem, 6vw, 5rem);
-  line-height: 1.05;
-  margin-bottom: 24px;
-}
+        <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn primary">
+          View GitHub Repository
+        </a>
+      </div>
+    </section>
+  </main>
 
-.hero p {
-  max-width: 760px;
-  font-size: 1.2rem;
-  color: #c9d1d9;
-  margin-bottom: 32px;
-}
+  <footer>
+    <p>© 2026 Riley Merry | UGV Drone Project</p>
+  </footer>
 
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
+  <script>
+    const sections = document.querySelectorAll(".fade-section");
 
-.section {
-  padding: 120px 8%;
-  max-width: 1100px;
-  margin: auto;
-}
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible");
+        }
+      });
+    }, {
+      threshold: 0.18
+    });
 
-.section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 24px;
-}
-
-.section p {
-  color: #c9d1d9;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.project-card {
-  background: rgba(22, 27, 34, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 32px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-}
-
-.project-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 12px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 24px 0;
-}
-
-.tags span {
-  padding: 8px 12px;
-  background: rgba(88, 166, 255, 0.12);
-  border: 1px solid rgba(88, 166, 255, 0.35);
-  border-radius: 999px;
-  color: #9ecbff;
-  font-size: 0.9rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.primary {
-  background: #58a6ff;
-  color: #0d1117;
-}
-
-.secondary {
-  border: 1px solid #58a6ff;
-  color: #58a6ff;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  transition: 0.2s ease;
-}
-
-.fade-section {
-  opacity: 0;
-  transform: translateY(45px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #8b949e;
-  background: #0d1117;
-}
-
-@media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .hero {
-    padding-top: 80px;
-  }
-
-  .section {
-    padding: 80px 8%;
-  }
-}
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
