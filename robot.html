@@ -2,169 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>UGV Drone | Riley Merry</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="navbar">
-    <div class="logo">Riley Merry</div>
 
-    <nav>
-      <a href="index.html">Home</a>
+<header class="navbar">
+  <div class="logo">Riley Merry</div>
 
-      <div class="dropdown">
-        <button class="dropbtn">Projects</button>
-        <div class="dropdown-content">
-          <a href="robot.html">UGV Drone</a>
-        </div>
+  <nav>
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <button class="dropbtn">Projects</button>
+      <div class="dropdown-content">
+        <a href="robot.html">UGV Drone</a>
+      </div>
+    </div>
+
+    <a href="index.html#about">About Me</a>
+    <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero fade-section">
+  <div class="hero-content">
+    <span class="eyebrow">UGV Drone Project</span>
+
+    <h1>Unmanned ground vehicle built from embedded systems and real-world integration.</h1>
+
+    <p>
+      This project combines Raspberry Pi hardware, C++ software, GPIO motor control,
+      Linux services, browser-based control, CAD design, and TCP/IP networking into a
+      functional unmanned ground vehicle system.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#architecture" class="btn primary">View System</a>
+      <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn secondary">
+        GitHub Repository
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET -->
+<section class="section dark-section fade-section">
+  <div class="section-inner">
+    <h2>Target User & Mission Vision</h2>
+
+    <p>
+      Designed for military, law enforcement, and emergency response applications,
+      this platform demonstrates remote inspection, scouting, and control capabilities.
+    </p>
+
+    <p>
+      The focus is not just motion, but system-level integration of embedded hardware,
+      communication, and software.
+    </p>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture" class="section dark-section fade-section">
+  <div class="section-inner">
+    <h2>System Architecture</h2>
+
+    <p>
+      The system uses a client-server model where a browser sends commands over TCP/IP
+      to a Raspberry Pi, which processes the input and controls the motors through GPIO.
+    </p>
+
+    <div class="architecture-card">
+      <div class="arch-box">Client<br>Browser UI</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box">Network<br>TCP/IP</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box">Raspberry Pi<br>Linux + C++</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box">GPIO<br>Motor Signals</div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-box">Motion<br>UGV Movement</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAD -->
+<section class="section panel-section fade-section">
+  <div class="section-inner">
+    <h2>CAD Model & Mechanical Design</h2>
+
+    <p>
+      The chassis was designed to support embedded hardware, motor drivers,
+      and future sensor integration with a focus on simplicity and modularity.
+    </p>
+
+    <div class="image-grid">
+      <img src="image/CAD1.png" class="project-image">
+      <img src="image/CAD2.png" class="project-image">
+    </div>
+
+    <img src="image/CAD.png" class="project-image">
+
+    <p>
+      Future iterations will improve weight distribution, cable management,
+      and structural efficiency.
+    </p>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section class="section dark-section fade-section">
+  <div class="section-inner">
+    <h2>Networking Demonstration</h2>
+
+    <p>
+      The Raspberry Pi acts as a server on port 8080, receiving commands
+      from the browser interface over TCP/IP.
+    </p>
+
+    <img src="image/tcp-handshake.PNG" class="project-image">
+
+    <p>
+      This Wireshark capture shows a SYN packet initiating the TCP connection,
+      validating real client-server communication.
+    </p>
+  </div>
+</section>
+
+<!-- CODE -->
+<section class="section panel-section fade-section">
+  <div class="section-inner">
+    <h2>Code Architecture</h2>
+
+    <p>
+      The system is structured using modular C++ code, Linux services,
+      and a web interface for control logic.
+    </p>
+
+    <div class="project-card">
+      <h3>Tech Stack</h3>
+
+      <div class="tags">
+        <span>C++</span>
+        <span>Linux</span>
+        <span>GPIO</span>
+        <span>CMake</span>
+        <span>TCP/IP</span>
+        <span>HTML/CSS</span>
       </div>
 
-      <a href="index.html#about">About Me</a>
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-    </nav>
-  </header>
+      <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn primary">
+        View Repository
+      </a>
+    </div>
+  </div>
+</section>
 
-  <main>
+</main>
 
-    <!-- HERO -->
-    <section class="hero fade-section">
-      <div class="hero-content">
-        <span class="eyebrow">UGV Drone Project</span>
+<footer>
+  <p>© 2026 Riley Merry</p>
+</footer>
 
-        <h1>Unmanned ground vehicle built around embedded systems and real-world integration.</h1>
+<script>
+const sections = document.querySelectorAll(".fade-section");
 
-        <p>
-          This project combines Raspberry Pi hardware, C++ software, GPIO motor
-          control, Linux services, browser-based operation, CAD design, and TCP/IP
-          networking into a functional unmanned ground vehicle platform.
-        </p>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
 
-        <div class="hero-buttons">
-          <a href="#cad" class="btn primary">View System</a>
-          <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn secondary">
-            GitHub Repository
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- TARGET USER -->
-    <section class="section dark-section fade-section">
-      <div class="section-inner">
-        <h2>Target User & Mission Vision</h2>
-
-        <p>
-          The envisioned users include military, law enforcement, and emergency
-          response teams requiring a compact ground vehicle for remote inspection
-          and situational awareness.
-        </p>
-
-        <p>
-          The goal is not just movement, but demonstrating how embedded control,
-          networking, and mechanical design integrate into a functional system.
-        </p>
-      </div>
-    </section>
-
-    <!-- CAD SECTION -->
-    <section id="cad" class="section panel-section fade-section">
-      <div class="section-inner">
-        <h2>CAD Model & Mechanical Design</h2>
-
-        <p>
-          The mechanical design was developed to support embedded hardware,
-          motor drivers, and future sensor expansion. The focus was rapid
-          prototyping and modularity.
-        </p>
-
-        <div class="image-grid">
-          <img src="image/CAD1.png" class="project-image">
-          <img src="image/CAD2.png" class="project-image">
-        </div>
-
-        <img src="image/CAD.png" class="project-image">
-
-        <p>
-          Future improvements will focus on structural optimization, cable
-          management, and sensor integration.
-        </p>
-      </div>
-    </section>
-
-    <!-- NETWORKING -->
-    <section class="section dark-section fade-section">
-      <div class="section-inner">
-        <h2>Networking Demonstration (TCP/IP)</h2>
-
-        <p>
-          The system operates using a client-server model where the Raspberry Pi
-          acts as a server and the browser acts as the client.
-        </p>
-
-        <p>
-          The capture below shows a TCP SYN packet initiating a connection to the
-          Raspberry Pi on port 8080.
-        </p>
-
-        <img src="image/tcp-handshake.PNG" class="project-image">
-
-        <p>
-          This validates real transport-layer communication between the control
-          interface and the embedded system.
-        </p>
-      </div>
-    </section>
-
-    <!-- CODE -->
-    <section class="section panel-section fade-section">
-      <div class="section-inner">
-        <h2>Code Architecture</h2>
-
-        <p>
-          The project is structured using modular C++ components, Linux services,
-          and a web interface that translates user input into motor control.
-        </p>
-
-        <div class="project-card">
-          <h3>Technology Stack</h3>
-
-          <div class="tags">
-            <span>C++</span>
-            <span>Linux</span>
-            <span>GPIO</span>
-            <span>CMake</span>
-            <span>TCP/IP</span>
-            <span>HTML/CSS</span>
-          </div>
-
-          <a href="https://github.com/RileyMerry/robot" target="_blank" class="btn primary">
-            View Repository
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2026 Riley Merry | UGV Drone Project</p>
-  </footer>
-
-  <script>
-    const sections = document.querySelectorAll(".fade-section");
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    }, { threshold: 0.2 });
-
-    sections.forEach(section => observer.observe(section));
-  </script>
+sections.forEach(section => observer.observe(section));
+</script>
 
 </body>
 </html>
