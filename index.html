@@ -22,7 +22,7 @@
       </div>
 
       <a href="#about">About Me</a>
-      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/riley-merry-528953252" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </nav>
   </header>
 
@@ -42,7 +42,7 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="robot.html" class="btn primary">View UGV Drone</a>
+          <a href="robot.html" class="btn primary">View UGV Drone →</a>
           <a href="#about" class="btn secondary">About Me</a>
         </div>
       </div>
@@ -91,7 +91,7 @@
             <span>CAD</span>
           </div>
 
-          <a href="robot.html" class="btn primary">View Project</a>
+          <a href="robot.html" class="btn primary">View Project →</a>
         </div>
       </div>
     </section>
@@ -115,7 +115,7 @@
           complex systems down into something understandable and useful.
         </p>
 
-        <a href="https://www.linkedin.com/" target="_blank" class="btn secondary">
+        <a href="https://www.linkedin.com/in/riley-merry-528953252" target="_blank" rel="noopener noreferrer" class="btn secondary">
           Connect on LinkedIn
         </a>
       </div>
@@ -133,17 +133,11 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-        } else {
-          entry.target.classList.remove("visible");
         }
       });
-    }, {
-      threshold: 0.18
-    });
+    }, { threshold: 0.18 });
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
   </script>
 </body>
 </html>
