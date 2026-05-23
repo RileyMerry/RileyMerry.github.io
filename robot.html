@@ -23,7 +23,12 @@
     </div>
 
     <a href="index.html#about">About Me</a>
-    <a href="https://www.linkedin.com/in/riley-merry-528953252" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+    <a href="https://www.linkedin.com/in/riley-merry-528953252"
+       target="_blank"
+       rel="noopener noreferrer">
+       LinkedIn
+    </a>
   </nav>
 </header>
 
@@ -31,27 +36,37 @@
 
 <section class="hero fade-section">
   <div class="hero-content">
+
     <span class="eyebrow">UGV Drone Project</span>
 
-    <h1>Unmanned ground vehicle built around embedded systems and real-world integration.</h1>
+    <h1>
+      Unmanned ground vehicle built around embedded systems and real-world integration.
+    </h1>
 
     <p>
-      This project combines Raspberry Pi hardware, C++ software, GPIO motor control,
-      Linux services, browser-based control, CAD design, and TCP/IP networking into a
-      functional unmanned ground vehicle system.
+      This project combines Raspberry Pi hardware, C++ software,
+      GPIO motor control, Linux services, browser-based operation,
+      CAD design, and TCP/IP networking into a functional unmanned
+      ground vehicle platform.
     </p>
 
     <div class="hero-buttons">
       <a href="#architecture" class="btn primary">View System →</a>
-      <a href="https://github.com/RileyMerry/robot" target="_blank" rel="noopener noreferrer" class="btn secondary">
-        GitHub Repository
+
+      <a href="https://github.com/RileyMerry/robot"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn secondary">
+         GitHub Repository
       </a>
     </div>
+
   </div>
 </section>
 
 <section class="section dark-section fade-section">
   <div class="section-inner">
+
     <h2>Target User & Mission Vision</h2>
 
     <p>
@@ -60,123 +75,228 @@
     </p>
 
     <p>
-      The focus is not just motion, but system-level integration of embedded hardware,
-      communication, and software.
+      The focus of the project is not just movement, but the integration of
+      embedded hardware, communication systems, networking, and software into
+      a complete operational platform.
     </p>
+
   </div>
 </section>
 
 <section id="architecture" class="section dark-section fade-section">
   <div class="section-inner">
+
     <h2>System Architecture</h2>
 
     <p>
-      The system uses a client-server model where a browser sends commands over TCP/IP
-      to a Raspberry Pi, which processes the input and controls the motors through GPIO.
+      The robot operates using a client-server model where browser commands
+      are transmitted over TCP/IP to a Raspberry Pi running Linux and C++ control logic.
+      The Raspberry Pi processes incoming requests and maps them to GPIO outputs
+      that drive the motors through the motor controller.
     </p>
 
     <div class="architecture-card">
-      <div class="arch-box">Client<br>Browser UI</div>
+
+      <div class="arch-box">
+        Client<br>Browser UI
+      </div>
+
       <div class="arch-arrow">→</div>
-      <div class="arch-box">Network<br>TCP/IP</div>
+
+      <div class="arch-box">
+        TCP/IP<br>Networking
+      </div>
+
       <div class="arch-arrow">→</div>
-      <div class="arch-box">Raspberry Pi<br>Linux + C++</div>
+
+      <div class="arch-box">
+        Raspberry Pi<br>Linux + C++
+      </div>
+
       <div class="arch-arrow">→</div>
-      <div class="arch-box">GPIO<br>Motor Signals</div>
+
+      <div class="arch-box">
+        GPIO<br>Motor Signals
+      </div>
+
       <div class="arch-arrow">→</div>
-      <div class="arch-box">Motion<br>UGV Movement</div>
+
+      <div class="arch-box">
+        UGV<br>Movement
+      </div>
+
     </div>
+
   </div>
 </section>
 
 <section class="section panel-section fade-section">
   <div class="section-inner">
+
     <h2>Prototyping & System Development</h2>
 
     <p>
-      The UGV was developed through an iterative prototyping process. Early testing
-      focused on validating hardware connections, power distribution, motor behavior,
-      and the communication path between the user interface and embedded control layer.
+      The UGV was developed through iterative hardware and software prototyping.
+      Early development focused on validating electrical connections, motor behavior,
+      power distribution, and communication between embedded components.
     </p>
 
     <div class="proto-grid">
+
       <div class="proto-card">
+
         <h3>Hardware Bring-Up</h3>
-        <img src="image/IMG_1845.jpg" alt="UGV hardware prototype with Raspberry Pi, motor driver, battery pack, wiring, and motors" class="project-image">
+
+        <img
+          src="image/IMG_1845.jpeg"
+          alt="UGV hardware prototype"
+          class="project-image"
+        >
+
         <p>
-          Initial hardware integration included the Raspberry Pi, motor driver,
-          external battery pack, wiring, and DC gear motors. This stage was used
-          to validate physical connections, motor response, and power delivery
-          before moving toward a cleaner chassis layout.
+          Initial hardware integration included the Raspberry Pi,
+          motor driver, external battery pack, DC gear motors,
+          and prototype wiring used to validate movement and power stability.
         </p>
+
       </div>
 
       <div class="proto-card">
+
         <h3>Browser-Based Control GUI</h3>
-        <img src="image/IMG_1801.png" alt="Browser-based robot controller interface with directional buttons" class="project-image">
+
+        <img
+          src="image/IMG_1801.png"
+          alt="Browser-based robot controller"
+          class="project-image"
+        >
+
         <p>
           A browser-based control interface was developed to send directional
-          commands to the Raspberry Pi server. The GUI connects the human input
-          layer to the embedded system, demonstrating front-end control,
-          network communication, and hardware response.
+          commands to the Raspberry Pi server over TCP/IP networking.
         </p>
+
       </div>
+
     </div>
-    </div>
-  </div>
-</section>
-<section class="section panel-section fade-section">
-  <div class="section-inner">
-    <h2>CAD Model & Mechanical Design</h2>
 
     <p>
-      The chassis was designed to support embedded hardware, motor drivers,
-      and future sensor integration with a focus on simplicity and modularity.
+      This development stage demonstrates the transition from raw hardware
+      integration into a functional embedded control system.
     </p>
 
-    <div class="image-grid">
-      <img src="image/CAD1.png" alt="UGV CAD assembly view 1" class="project-image">
-      <img src="image/CAD2.png" alt="UGV CAD assembly view 2" class="project-image">
-    </div>
-
-    <img src="image/CAD.png" alt="UGV CAD engineering drawing" class="project-image">
-
-    <p>
-      Future iterations will improve weight distribution, cable management,
-      and structural efficiency.
-    </p>
   </div>
 </section>
 
 <section class="section dark-section fade-section">
   <div class="section-inner">
-    <h2>Networking Demonstration</h2>
+
+    <h2>Live Control Interface & Camera Feed</h2>
 
     <p>
-      The Raspberry Pi acts as a server on port 8080, receiving commands
-      from the browser interface over TCP/IP.
+      The control interface was expanded to include a live camera feed
+      alongside browser-based directional controls. This allowed the robot
+      to be remotely operated while providing real-time visual feedback
+      from the Raspberry Pi camera system.
     </p>
 
-    <img src="image/tcp-handshake.PNG" alt="Wireshark TCP handshake capture" class="project-image">
+    <img
+      src="image/GUIFINAL.PNG"
+      alt="Robot controller with live camera feed"
+      class="project-image"
+    >
 
     <p>
-      This Wireshark capture shows a SYN packet initiating the TCP connection,
-      validating real client-server communication.
+      This interface demonstrates integration between front-end UI design,
+      TCP/IP communication, embedded Linux services, and real-time camera streaming.
+      While the controller operates locally on the Raspberry Pi network,
+      this screenshot documents the functional interface used during testing
+      and system validation.
     </p>
+
   </div>
 </section>
 
 <section class="section panel-section fade-section">
   <div class="section-inner">
+
+    <h2>CAD Model & Mechanical Design</h2>
+
+    <p>
+      CAD models were developed to support component layout,
+      structural planning, and future expansion of the system.
+    </p>
+
+    <div class="image-grid">
+
+      <img
+        src="image/CAD1.png"
+        alt="UGV CAD assembly 1"
+        class="project-image"
+      >
+
+      <img
+        src="image/CAD2.png"
+        alt="UGV CAD assembly 2"
+        class="project-image"
+      >
+
+    </div>
+
+    <img
+      src="image/CAD.png"
+      alt="UGV CAD engineering drawing"
+      class="project-image"
+    >
+
+    <p>
+      Future iterations will improve cable routing, structural rigidity,
+      and payload integration.
+    </p>
+
+  </div>
+</section>
+
+<section class="section dark-section fade-section">
+  <div class="section-inner">
+
+    <h2>Networking Demonstration</h2>
+
+    <p>
+      Wireshark was used to validate communication between the client browser
+      and Raspberry Pi server over TCP/IP.
+    </p>
+
+    <img
+      src="image/tcp-handshake.PNG"
+      alt="TCP handshake capture"
+      class="project-image"
+    >
+
+    <p>
+      This capture shows the SYN packet initiating a TCP connection
+      between the client and the Raspberry Pi server running on port 8080.
+      The capture validates real network-layer communication between
+      the operator interface and embedded system.
+    </p>
+
+  </div>
+</section>
+
+<section class="section panel-section fade-section">
+  <div class="section-inner">
+
     <h2>Code Architecture</h2>
 
     <p>
-      The system is structured using modular C++ code, Linux services,
-      and a web interface for control logic.
+      The software stack combines modular C++ code, Linux services,
+      GPIO control logic, and browser-based interfaces into a complete
+      embedded systems platform.
     </p>
 
     <div class="project-card">
-      <h3>Tech Stack</h3>
+
+      <h3>Technology Stack</h3>
 
       <div class="tags">
         <span>C++</span>
@@ -185,12 +305,18 @@
         <span>CMake</span>
         <span>TCP/IP</span>
         <span>HTML/CSS</span>
+        <span>Embedded Systems</span>
       </div>
 
-      <a href="https://github.com/RileyMerry/robot" target="_blank" rel="noopener noreferrer" class="btn primary">
-        View Repository →
+      <a href="https://github.com/RileyMerry/robot"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn primary">
+         View Repository →
       </a>
+
     </div>
+
   </div>
 </section>
 
@@ -209,9 +335,13 @@ const observer = new IntersectionObserver(entries => {
       entry.target.classList.add("visible");
     }
   });
-}, { threshold: 0.2 });
+}, {
+  threshold: 0.2
+});
 
-sections.forEach(section => observer.observe(section));
+sections.forEach(section => {
+  observer.observe(section);
+});
 </script>
 
 </body>
